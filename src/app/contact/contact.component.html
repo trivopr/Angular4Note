@@ -1,0 +1,55 @@
+<form (ngSubmit)="sendContact(frmContact.value)" #frmContact="ngForm">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" required minlength="5" maxlength="12" #username="ngModel" placeholder="Username" name="username" ngModel>
+
+        <div *ngIf="username.errors && (username.dirty || username.touched)">
+            <div [hidden]="!username.errors.required" class="text-danger">
+                You must input username !!!
+            </div>
+            <div [hidden]="!username.errors.minlength" class="text-danger">
+                Your username must larger than 5 characters ...
+            </div>
+            <div [hidden]="!username.errors.maxlength" class="text-danger">
+                Your username must less than 13 characters
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Email address</label>
+        <input type="email" class="form-control" placeholder="Address" name="address" required #email="ngModel" ngModel>
+
+        <div *ngIf="email.errors && (email.touched || email.dirty)">
+            <div class="text-danger" [hidden]="!email.errors.required">
+                You must enter your Email
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Postal Code</label>
+        <input type="text" required pattern="^[3-9][a-z]{4}$" class="form-control" placeholder="[3-9]abcd" name="postcode" #postalcode="ngModel" ngModel>
+
+        <div *ngIf="postalcode.errors && (postalcode.touched || postalcode.dirty)">
+            <div class="text-danger" [hidden]="!postalcode.errors.pattern">
+                Your Postal Code must correct Parttern from
+            </div>
+
+            <div class="text-danger" [hidden]="!postalcode.errors.required">
+                You must enter Postal Code
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" id="exampleInputFile" name="imageUpload" ngModel>
+        <p class="help-block">Example block-level help text here.</p>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Check me out
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
