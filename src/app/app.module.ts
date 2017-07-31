@@ -11,6 +11,7 @@ import { SharedComponent } from './shared/shared.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { BasicHighlightDirective } from './shared/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './shared/better-highlight/better-highlight.directive';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { BasicHighlightDirective } from './shared/basic-highlight/basic-highligh
     NotfoundComponent,
     HeaderComponent,
     BasicHighlightDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
