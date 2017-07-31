@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SharedComponent } from './shared/shared.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { BasicHighlightDirective } from './shared/basic-highlight/basic-highlight.directive';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HeaderComponent } from './shared/header/header.component';
     ContactComponent,
     SharedComponent,
     NotfoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    BasicHighlightDirective,
   ],
   imports: [
     BrowserModule,
