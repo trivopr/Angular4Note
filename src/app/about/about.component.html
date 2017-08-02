@@ -2,5 +2,39 @@
     about works!
 </p>
 
-<h4 appBasicHighlight>1. Create Attribute directives: appBasicHighlight</h4>
-<h4 appBetterHighlight>2. Better directives with Renderer2: appBetterHighlight</h4>
+<ol>
+    <li>
+        <h4 appBasicHighlight>Create Attribute directives: appBasicHighlight</h4>
+        <p class="example">
+            <code>
+                this.elementRef.nativeElement.style.backgroundColor = 'yellow';
+            </code>
+        </p>
+    </li>
+    <li>
+        <h4 appBetterHighlight>Better directives with Renderer2: appBetterHighlight</h4>
+        <p class="example">
+            <code>
+                this.renderer.setStyle(this.elementDef.nativeElement, 'background-color', 'orange')
+            </code>
+        </p>
+    </li>
+    <li>
+        <h4 #testHostListener>Host Listener: Hover me</h4>
+        <p class="example">
+            <code>
+                @HostListener('mouseenter') mouseover()
+            </code>
+        </p>
+    </li>
+
+    <li>
+        <h4>Host Binding</h4>
+        <p class="example">
+            <code>
+                @HostBinding('style.color') textColor: string;
+            </code>
+        </p>
+    </li>
+
+</ol>
